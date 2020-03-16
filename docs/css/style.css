@@ -9,7 +9,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
 }
 
 .hd-text {
-  
+
     font-family: 'Merriweather', serif;
     color: #cdae82;
 }
@@ -40,20 +40,21 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
       background: #aaa;
      }
 
-.custom1 {
-  background-color:transparent;
+.footer {
+  background-color: black;
+  color: #cdae82;
 }
 
 .custom2 {
-  line-height:20px;
+  line-height: 20px;
 }
 
 .custom3 {
-  border-color:#000;
+  border-color: #000;
 }
 
 .custom4 {
-  padding:10em;
+  padding: 10em;
 }
 .custom5 {
   text-decoration:blink
