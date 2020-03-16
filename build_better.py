@@ -1,28 +1,52 @@
-# First, get the template files
-top_template = open('./templates/top.html').read()
-bottom_template = open('./templates/bottom.html').read()
+#feedback
+print('hello  combined website!')
+#import templating
+from string import Template
+# get template files
+single_template = open('./templates/single_template.html').read()
+template = Template(single_template)
 
 # Read in index HTML code
-content = open('./content/index.html').read()
-
+index_content = open('./content/index.html').read()
 # Combine template HTML code with content HTML code
-index_html = top_template + content + bottom_template
+index_html = template.safe_substitute(
+    title='Welcome!',
+    index_class='active',
+    content=index_content,
+)
 open('./docs/index.html', 'w+').write(index_html)
 
 # Rinse and repeat, but with blog HTML code
-content = open('./content/blog.html').read()
-blog_html = top_template + content + bottom_template
+blog_content = open('./content/blog.html').read()
+blog_html = template.safe_substitute(
+    title='Blog',
+    blog_class='active',
+    content=blog_content,
+)
 open('./docs/blog.html', 'w+').write(blog_html)
 
 # And again, this time with project HTML code
-content = open('./content/projects.html').read()
-projects_html = top_template + content + bottom_template
+projects_content = open('./content/projects.html').read()
+projects_html = template.safe_substitute(
+    title='Projects',
+    projects_class='active',
+    content=projects_content,
+)
 open('./docs/projects.html', 'w+').write(projects_html)
+
 # And again, this time with bio HTML code
-content = open('./content/projects.html').read()
-bio_html = top_template + content + bottom_template
+bio_content = open('./content/projects.html').read()
+bio_html = template.safe_substitute(
+    title='Bio',
+    bio_class='active',
+    content=bio_content,
+)
 open('./docs/bio.html', 'w+').write(bio_html)
 # And again, this time with project HTML code
-content = open('./content/contact.html').read()
-contact_html = top_template + content + bottom_template
+contact_content = open('./content/contact.html').read()
+contact_html = template.safe_substitute(
+    title='Contact',
+    contact_class='active',
+    content=contact_content,
+)
 open('./docs/contact.html', 'w+').write(contact_html)
