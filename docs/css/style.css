@@ -2,15 +2,16 @@ body, html {
   height: 100%;
   font-family: 'Titillium Web', sans-serif;
  background: rgb(0,0,0);
-background: -moz-linear-gradient(180deg, rgba(0,0,0,0.9023810207676821) 25%, rgba(205,174,130,0.9247899843531162) 75%);
-background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.9023810207676821) 25%, rgba(205,174,130,0.9247899843531162) 75%);
-background: linear-gradient(180deg, rgba(0,0,0,0.9023810207676821) 25%, rgba(205,174,130,0.9247899843531162) 75%);
+background: -moz-linear-gradient(135deg, rgba(0,0,0,0.9023810207676821) 5%, rgba(205,174,130,0.9247899843531162) 50%);
+background: -webkit-linear-gradient(135deg, rgba(0,0,0,0.9023810207676821) 5%, rgba(205,174,130,0.9247899843531162) 50%);
+background: linear-gradient(135deg, rgba(0,0,0,0.9023810207676821) 5%, rgba(205,174,130,0.9247899843531162) 50%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#cdae82",GradientType=1);
 }
 
 .hd-text {
+  
     font-family: 'Merriweather', serif;
-    color: #fff;
+    color: #cdae82;
 }
 .bg {
   /* The image used */
