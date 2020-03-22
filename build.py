@@ -2,6 +2,35 @@
 print('hello  combined website!')
 #import templating
 from string import Template
+
+# pages list
+pages = [
+    {
+        'filename': './content/index.html',
+        'output': './docs/index.html',
+        'title': 'Welcome!'
+    },
+    {
+        'filename': './content/blog.html',
+        'output': './docs/blog.html',
+        'title': 'Blog'
+    },
+    {
+        'filename': './content/projects.html',
+        'output': './docs/projects.html',
+        'title': 'Projects'
+    },
+    {
+        'filename': './content/bio.html',
+        'output': './docs/bio.html',
+        'title': 'Bio'
+    },
+    {
+        'filename': './content/contact.html',
+        'output': './docs/contact.html',
+        'title': 'Contact'
+    }
+]
 # get template files
 def main():
     single_template = open('./templates/base.html').read()
@@ -36,13 +65,14 @@ def main():
     open('./docs/projects.html', 'w+').write(projects_html)
 
     # And again, this time with bio HTML code
-    bio_content = open('./content/projects.html').read()
+    bio_content = open('./content/bio.html').read()
     bio_html = template.safe_substitute(
         title='Bio',
         bio_class='active',
         content=bio_content,
     )
     open('./docs/bio.html', 'w+').write(bio_html)
+
     # And again, this time with project HTML code
     contact_content = open('./content/contact.html').read()
     contact_html = template.safe_substitute(
