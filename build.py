@@ -8,27 +8,32 @@ pages = [
     {
         'filename': './content/index.html',
         'output': './docs/index.html',
-        'title': 'Welcome!'
+        'title': 'Welcome!',
+        'index_class' : 'active'
     },
     {
         'filename': './content/blog.html',
         'output': './docs/blog.html',
         'title': 'Blog'
+        'blog_class' : 'active'
     },
     {
         'filename': './content/projects.html',
         'output': './docs/projects.html',
         'title': 'Projects'
+        'projects_class' : 'active'
     },
     {
         'filename': './content/bio.html',
         'output': './docs/bio.html',
         'title': 'Bio'
+        'content_class' : 'active'
     },
     {
         'filename': './content/contact.html',
         'output': './docs/contact.html',
         'title': 'Contact'
+        'contact_class' : 'active'
     }
 ]
 # get template files
