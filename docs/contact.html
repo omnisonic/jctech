@@ -24,6 +24,8 @@
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container"> 
+
   <a class="navbar-brand" href="#">John Clarke Tech</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -47,6 +49,7 @@
       </li>
     </ul>
   </div>
+  </div>
 </nav>
 
 <div class="container" style="margin-top:30px">
@@ -57,7 +60,7 @@
      <h5>Photo of me:</h5>
      <div><img class="fakeimg" src="./img/headshot.jpg" alt="Italian Trulli">
 </div>
-     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+     <!-- <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
      <h3>Some Links</h3>
      <p>Lorem ipsum dolor sit ame.</p>
      <ul class="nav nav-pills flex-column">
@@ -74,12 +77,82 @@
          <a class="nav-link disabled" href="#">Disabled</a>
        </li>
      </ul>
-     <hr class="d-sm-none">
+     <hr class="d-sm-none"> -->
    </div>
 
     <div class="col">
        <h2><div>
   <h2>Contact</h2>
+  <!-- copypasta form from https://dev.to/drsavvina/build-a-simple-working-contact-form-with-bootstrap-4-mcf -->
+  <section class="resume-section p-4 p-lg-5 text-center" id="contact">
+    <div class="my-auto">
+      <h2 class="mb-4">&lt; Contact Information &gt;</h2>
+
+      <ul class="fa-ul mb-4 ml-0">
+        <li id="mail-address">
+<!--               Replace with your email address -->
+            <i class="fas fa-envelope-open mr-2 contact-icons"></i
+            >youremail@mail.com</a
+          >
+        </li>
+        <li>
+          <i class="fas fa-mobile-alt mr-2 contact-icons"></i>+48 888 888
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt mr-2 contact-icons"></i>Oakland, CA
+        </li>
+      </ul>
+
+      <p>
+        ...or leave your message below and I will be back to you as soon as
+        possible.
+      </p>
+
+      <form
+        class="contact-form d-flex flex-column align-items-center"
+        action="https://formspree.io/youremail@mail.com"
+        method="POST"
+      >
+        <div class="form-group w-75">
+          <input
+            type="name"
+            class="form-control"
+            placeholder="Name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group w-75">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="form-group w-75">
+          <textarea
+            class="form-control"
+            type="text"
+            placeholder="Message"
+            rows="7"
+            name="name"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-submit btn-info w-75">Submit</button>
+      </form>
+    </div>
+  </section>
+<script
+  defer
+  src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+  integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+  crossorigin="anonymous"
+></script>
 
 </div>
 </h2>
@@ -88,7 +161,7 @@
 </div>
 
 <div class="jumbotron text-center footer" style="margin-bottom:0">
-  <p>Isn't this Awesome!?</p>
+  <p>Copyright <script>document.write( new Date().getFullYear() );</script> </p>
 </div>
 
 </body>
