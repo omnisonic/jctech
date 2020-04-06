@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>${title}</title>
+  <title>{{title}}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -32,21 +32,12 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
+    {% for page in pages %}
       <li class="nav-item">
-        <a class="nav-link ${index_class}" href="./index.html">Home</a>
+        <a class="nav-link" {{active_class}} href="{{ page.name|join('.html') }}">{{ page.title|title }}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link ${blog_class}" href="./blog.html">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link ${projects_class}" href="./projects.html">Projects</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link ${bio_class}" href="./bio.html">Bio</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link ${contact_class}" href="./contact.html">Contact</a>
-      </li>
+    {% endfor %}
+
     </ul>
   </div>
   </div>

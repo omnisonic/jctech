@@ -1,22 +1,17 @@
 
-# website pages List
-
-import glob
-import os
-all_html_files = glob.glob('./content/*.html')
-
 def main():
     #feedback
     print('hello website build')
 
 main()
-import glob
-import os
-files_list = glob.glob('./content/*.html')
+
 # print(all_html_files)
 
 pages = []
-def make_pages():
+def make_pages(): 
+    import glob
+    import os
+    files_list = glob.glob('./content/*.html')
     for i in files_list:
         myobj = {} # initialize page dict 
         myobj.update({'filename': i}) # add filename to dict
@@ -24,8 +19,7 @@ def make_pages():
         name_only, extension = os.path.splitext(file_name) # remove file extension
         myobj['title'] = name_only # add title to dict
         myobj['output'] = './docs/' + os.path.basename(i) # add outpute destination to dict
-        pages.append(myobj) # add each iteration to pages list
-                
+        pages.append(myobj) # add each iteration to pages list             
 make_pages()
 
 #import template libarary
@@ -37,6 +31,7 @@ for page in pages:
     page_html = template.render(
         title=page['title'],
         content=page_content,
+        pages=pages,
     )
     
     # open(page['output'], 'w+').write(page_html)
