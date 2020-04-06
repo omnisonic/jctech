@@ -27,13 +27,14 @@ def make_pages():
         pages.append(myobj) # add each iteration to pages list
                 
 make_pages()
+
 #import template libarary
-from string import Template
+from jinja2 import Template
 single_template = open('./templates/base.html').read()
 template = Template(single_template)
 for page in pages:
     page_content = open(page['filename']).read()
-    page_html = template.safe_substitute(
+    page_html = template.render(
         title=page['title'],
         content=page_content,
     )
