@@ -32,6 +32,7 @@ for page in pages:
         title=page['title'],
         content=page_content,
         pages=pages,
+        active_class='active'
     )
     
     # open(page['output'], 'w+').write(page_html)

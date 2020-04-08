@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{title}}</title>
+  <title>{{title|title}}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -34,7 +34,7 @@
     <ul class="navbar-nav">
     {% for page in pages %}
       <li class="nav-item">
-        <a class="nav-link" {{active_class}} href="{{ page.title ~ '.html' }}">{{ page.title|title }}</a>
+        <a class="nav-link {{ 'active' if title == page.title else '' }}"  href="{{ page.title ~ '.html' }}">{{ page.title|title }}</a>
       </li>
     {% endfor %}
 
