@@ -1,14 +1,13 @@
-
-
 import glob
 import os
 from jinja2 import Template
+import sys
 pages = []
 def main():
-        #feedback
-        print('hello website build')
-main()
-def make_pages():
+    #feedback
+    print('hello website build')
+
+def readin_pages():
     files_list = glob.glob('./content/*.html')
     for i in files_list:
         myobj = {} # initialize page dict 
@@ -17,8 +16,9 @@ def make_pages():
         name_only, extension = os.path.splitext(file_name) # remove file extension
         myobj['title'] = name_only # add title to dict
         myobj['output'] = './docs/' + os.path.basename(i) # add outpute destination to dict
-        pages.append(myobj) # add each iteration to pages list             
-make_pages()
+        pages.append(myobj) # add each iteration to pages list  
+    # print('hello readin pages')           
+readin_pages()
 
 #import template libarary
 def startTemplating():
@@ -37,4 +37,11 @@ def makePage():
             active_class='active'
         )
         open(page['output'], 'w+').write(page_html)
-makePage()
+# makePage()
+
+def newPage():  #writes a new page when using "new" argument with manage.py
+    x = """<div><h1>New Content!</h1>
+        <p> New content...</p></div>"""
+
+    with open("content/new_content_page.html","w+") as f:
+        f.writelines(x)
