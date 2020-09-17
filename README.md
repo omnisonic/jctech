@@ -1,3 +1,3 @@
-#jctech
-My Tech portfolio and blog
-Use build.sh or build.py to generate site changes.
+Static portfolio website and blog
+Generated with bash and python scripts.
+Uses build.sh or build.py to generate site changes.
